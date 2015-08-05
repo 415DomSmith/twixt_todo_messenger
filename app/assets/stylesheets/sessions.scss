@@ -1,0 +1,31 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.login-box {
+	text-align: center;
+}
+
+.sign-up-form-box {
+	width: 400px;
+	height: 480px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #A7CCC2;
+	// F9F9F9;
+	border: solid #2F6C79 2px;
+	border-radius: 35px;
+}
+
+.signup-label {
+	text-align: left;
+	margin-left: 120px;
+}
+
+.sign-up-link {
+	margin-top: 50px;
+}
+
+.login-forms {
+	margin-top: 40px;
+}

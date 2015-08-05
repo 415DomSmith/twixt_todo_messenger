@@ -1,0 +1,16 @@
+<div class="resets-box">
+
+	<h1>Forgot password?</h1>
+
+	<div class="resets-form-box">
+	<p class="resets-instructions">Enter your email address and we'll send you an email with instructions for resetting your password.</p>
+		<div class="resets-forms">
+			<%= form_tag resets_path do %>
+				<div class="resets-label"><%= label_tag :email, "Email" %></div>
+				<p><%= text_field_tag :email %></p>
+				<p><%= submit_tag "Send Email", class: "btn btn-primary" %></p>
+			<% end %>
+		</div>
+	</div>
+
+</div>

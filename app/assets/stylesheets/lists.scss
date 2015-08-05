@@ -1,0 +1,353 @@
+// Place all the styles related to the Lists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// ===========================
+// ==== LISTS INDEX PAGE =====
+// ===========================
+
+
+
+// =================================================
+// ==== GROUP MEMBERS AVATAR CIRCLE & FIRST NAME ===
+// =================================================
+
+.group-members-slider-outer {
+	height: 100px;
+	width: 100vw;
+	margin-left: 26px;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	text-align: center; 
+  background-image: url('/notebook.jpg');
+	 // background-color: #3E8A92;
+	 // DFEBD7
+}
+
+.group-members-slider-inner {
+	height: 100px;
+	width: 120%;
+	overflow-y: hidden;
+	overflow-x: scroll;
+}
+
+.members-mini-profile {
+	float: left;
+	text-align: center; 
+}
+
+.user-first-name {
+	margin-right: 20px;
+	margin-top: 5px;
+}
+
+.group-members-photo-div {
+	margin-right: 20px;
+	padding-right: 50px;
+	border-radius: 180px;
+	background-position: center;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 50px;
+	height: 50px;
+	border: #5F8894 1px solid;
+	box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+}
+
+
+.members-label {
+	margin-left: 10px;
+	width: 300px;
+	display: inline-block;
+}
+
+//============================================
+//==== DISPLAY LISTS AND LIST TOGGLE BTNS  ===
+//============================================
+
+.lists-list-toggles-outer {
+	height: 115px;
+	width: 100vw;
+	padding-left: 14px;
+	// overflow-y: hidden;
+	// overflow-x: scroll;
+  background-image: url('/notebook.jpg');
+	// background-color: #DFEBD7;
+	clear: both;
+	margin-top: -20px;
+	position: relative;
+}
+
+.lists-list-toggles-inner {
+	height: 115px;
+	width: 120%;
+	// overflow-y: hidden;
+	overflow-x: scroll;
+}
+
+.list-toggle-box {
+	height: 70px;
+	width: 100px;
+	background-color: #A7CCC2;
+	// F9F9F9;  /* off-white */
+	color: #2F6C79;
+	border: solid #2F6C79 1px;
+	border-radius: 15px;
+	// box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+	display: inline;
+	float: left;
+	list-style: none;
+	padding: 10px;
+	margin-left: 15px;
+	margin-top: 15px;
+	text-align: center;
+	cursor: pointer;
+	z-index: 1;
+	overflow-x: hidden;
+}
+
+.list-toggle-box:hover {
+	background: #2F6C79;
+	color: #EBE5CC;	
+}
+
+.list-name {
+	display: inline;
+}
+
+//=========================
+//==== LIST RENDER AREA ===
+//=========================
+
+
+.lists-label {
+	text-align: center;
+	margin-bottom: -10px;
+}
+
+.list-display {
+   // background-color: #647A9E;
+	width: 100vw;
+	height: 200vh;
+	margin-top: -5px;
+	// display: contain;
+	// overflow: auto;
+	// position: relative;
+	
+	z-index: -1;
+	// background: url("/notebook.jpg") no-repeat center center fixed;
+	background-color: rgba(0,0,0,0.3);
+	border: black solid 1px; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+
+// =============================================
+// ==== HIDDEN ELEMENTS FOR DOM MANIPULATION ===
+// =============================================
+
+.screen-blanket {
+	width: 100vw;
+	height: 200vh;
+	position: absolute;
+	background-color: rgba(0,0,0,0.6);
+	display: none;
+	z-index: 2;
+
+}
+
+.render-forms-here {
+	position: absolute;
+	width: 400px;
+	height: 430px;
+  background-color: #A7CCC2;
+	border-radius: 25px;
+	z-index: 3;
+	left: 50%;
+	margin-left: -200px;
+	display: none;
+	border: #2F6C79 solid 3px; 
+	padding: 10px;
+}
+
+.close-me-button {
+	float: right;
+	margin-left: -200px;
+	display: none;
+	padding: 10px;
+}
+
+.close-me-button:hover {
+	cursor: pointer;
+	color: #EBE5CC;
+	// F9F9F9;
+}
+
+///// NEW ITEM /////
+
+// .new-item-form-box {
+// 	text-align: center;
+// }
+
+.new-item-form-box #description{
+	width: 350px;
+	margin-left: 15px;
+}
+
+.new-item-form-box {
+	width: 350px;
+	margin-left: 15px;
+}
+
+.item-name-input {
+	width: 320px;
+	margin-left: 15px;
+}
+
+.item-name-label {
+	margin-left: 15px;
+}
+
+.add-item-description-label{
+	margin-left: 17px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+.item-name-input {
+	margin-left: 17px;
+	margin-top: 15px;
+	// margin-bottom: 10px;
+}
+
+.add-item-description-text-area {
+	margin-left: 15px;
+	margin-bottom: 10px;
+	width: 320px;
+}
+
+.upload-care-label {
+	display: inline;
+	padding-left: 15px;
+}
+
+.item-description-label .uploadcare-widget{
+	margin-top: 20px
+}
+
+.image-upload-div {
+	margin-top: 15px;
+	margin-left: 15px;
+}
+
+.image-label {
+	margin-top: 10px;
+}
+
+.add-item-submit-button {
+	// margin-top: 5px;
+	margin-left: 15px;
+	padding: 8px;
+}
+
+///// NEW NOTIFICATION /////
+
+.new-reminder-form-box {
+	text-align: center;
+}
+
+.new-notification-form {
+	margin-top: 20px;
+}
+
+.notification-label {
+	margin-right: 90px;
+}
+
+.add-item-form {
+	margin-right: 45px;
+}
+
+//==========================
+//==== ADD LISTS TO PAGE ===
+//==========================
+
+.new-list-button {
+	margin-left: 45%;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-top: -40px;
+}
+
+.hidden-list-box {
+	width: 400px;
+	height: 200px;
+	position: fixed;
+	left: 75%;
+	margin-left: -200px; 
+	opacity: 0.9;
+	background-color: #A7CCC2;
+	border: #2F6C79 solid 1px;
+	text-align: center;
+	margin-right: 35px;
+	color: #2F6C79;
+	border-radius: 25px;
+	z-index: 1;
+	display: none;
+	margin-top: -150px;
+}
+
+.new-list-label {
+	margin-right: 99px;
+}
+
+.new-list-form {
+	background-color: transparent;
+}
+
+.create-list-btn {
+	margin-top: 20px;
+}
+
+//=====================
+//==== REMOVE LISTS ===
+//=====================
+
+.remove-list {
+	text-align: left;
+	z-index: 2;
+}
+
+.remove-list-div {
+	margin-right: 70px;
+	margin-top: -10px;
+}
+
+.hidden-remove-box {
+	width: 300px;
+	height: 150px;
+	position: fixed;
+	background-color: rgba(100,122,158,1);
+	text-align: center;
+	left: 50%;
+	margin-left: -150px;
+	color: #EBE5CC;
+	// F9F9F9;
+	border-radius: 25px;
+	display: none;
+	margin-top: -20px; 
+}
+
+.delete-button {
+	display: inline-block;
+}
+
+.cancel-button {
+	display: inline-block;
+}

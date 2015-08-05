@@ -1,0 +1,36 @@
+<div class="login-box">
+	<h1>Login to Twixt</h1>
+  
+  	<div class="sign-up-form-box">
+  		<div class="login-forms">
+  			<%= form_tag(login_path) do %>
+				<p>
+				  <div class="signup-label"><%= label_tag(:email, nil, class:"control-label")%></div>
+				  <%= text_field_tag(:email, params[:email], autofocus: true)%>
+				</p>
+				<p>
+				  <div class="signup-label"><%= label_tag(:password)%></div>
+				  <%= password_field_tag(:password)%>
+				</p>
+				<p>
+				  <%= submit_tag("Log in", class: "btn btn-primary") %>
+				</p>
+			<% end %>
+
+			<div class="reset-password-link">
+				<p>
+					<%= link_to "Forgot password?", new_reset_path %>
+				</p>
+			</div>
+		</div>
+
+		<div class="sign-up-link">
+			<h3>Don't have an account?</h3>
+			<%= link_to "Sign up for an account here!", signup_path, class: "btn btn-primary" %>
+
+			<h3>Have a Google account?</h3>
+			<%= link_to "Connect using your Google account!", '/auth/google_oauth2', class: "btn btn-primary" %>
+		</div>
+	
+	</div> <!-- close sign-up-form-box class -->
+</div>

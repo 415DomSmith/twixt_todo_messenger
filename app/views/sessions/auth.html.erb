@@ -1,0 +1,32 @@
+<div class="login-box">
+	<h1>Twixt User Information</h1>
+	<div class= "sign-up-errors">
+	</div>
+	<div class="sign-up-form-box">
+		<div class="login-forms">
+			<%= form_for @user, url:user_signup_path do |f| %>
+					<div class="signup-label"><p>
+						<%= f.label "Email" %>
+						<%= f.text_field :email, autofocus: true %></p>
+					</div>
+					<div class="signup-label"><p>
+				    <%= f.label "First Name" %>
+				    <%= f.text_field :first_name%></p>
+				  </div>
+			    <div class="signup-label"><p>
+					  <%= f.label "Last Name" %><br/>
+				    <%= f.text_field :last_name%></p>
+				  </div>
+			    <div class="signup-label"><p>
+				    <%= f.label "Profile Picture" %><br/>
+				    <%= f.text_field :avatar%></p>
+			    </div>
+			    <div class="signup-label"><p>
+				    <%= f.label "Add Twixt Password" %>
+				    <%= f.text_field :password%></p>
+				  </div>
+			    <%= f.submit "Confirm User Information", class: "btn btn-primary"%>
+			<% end %>
+		</div>
+	</div>
+</div>

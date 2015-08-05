@@ -1,0 +1,47 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.profile-view-wrapper {
+	margin-left: 30px;
+}
+
+.profile-page-avatar-div {
+	float: left;
+	margin-right: 40px;
+	margin-bottom: 40px;
+}
+
+.profile-page-avatar {
+	height: 150px;
+	width: 150px;
+	border-radius: 10px;
+	border: 1px solid #2F6C79;
+	// 5C4463;
+}
+
+.profile-table {
+	margin-bottom: 30px;
+}
+
+.table-column-2 {
+	padding-left: 30px;
+}
+
+td {
+	padding: 5px;
+}
+
+.profile-button {
+	clear: both;
+	float: left;
+}
+
+.profile-button-two {
+	float: left;
+	margin-left: 20px;
+}
+
+.table-label {
+	font-weight: 400;
+}

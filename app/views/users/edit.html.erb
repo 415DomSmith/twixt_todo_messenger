@@ -1,0 +1,41 @@
+<h3>Edit Account Info</h3>
+<div class="profile-view-wrapper">
+
+
+	<div class="profile-page-avatar-div">
+		<img src="<%= @user.avatar %>" alt="profile image" class="profile-page-avatar">
+	</div>
+
+	<%= form_for @user do |f| %>
+		<table class="profile-table">
+			<tr>
+				<td class="table-label"><%= f.label "First name:" %></td>
+				<td class="table-column-2"><%= f.text_field :first_name %></td>
+			</tr>
+			<tr>
+				<td class="table-label"><%= f.label "Last name:" %></td>
+				<td class="table-column-2"><%= f.text_field :last_name %></td>
+			</tr>
+			<tr>
+				<td><%= f.label "Email:" %></td>
+				<td class="table-column-2"><%= f.text_field :email %></td>
+			</tr>
+			<tr>
+				<td><%= f.label "Birthdate:" %></td>
+				<td class="table-column-2"><%= f.text_field :birthday %></td>
+			</tr>
+			<tr>
+				<td class="table-label">Upload new profile image:</td>
+				<td><span class="image-upload-div"><input type="hidden" name="item[image_url]" role="uploadcare-uploader" id="uploadcare-widget" class="image-upload"></span></td>
+			</tr>
+		</table>
+
+		<%= f.submit "Save Changes", class: "btn btn-primary profile-button" %>
+
+	<% end %>
+
+
+
+<%= link_to "Cancel", user_path(@user), class: "btn btn-primary profile-button-two" %>
+
+</div> <!-- close profile-view-wrapper -->

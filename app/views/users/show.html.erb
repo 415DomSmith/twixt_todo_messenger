@@ -1,0 +1,43 @@
+<h3>Your Account Info</h3>
+<div class="profile-view-wrapper">
+
+
+	<div class="profile-page-avatar-div">
+		<img src="<%= @user.avatar %>" alt="profile image" class="profile-page-avatar">
+	</div>
+
+
+	<table class="profile-table">
+		<tr>
+			<td class="table-label">First Name:</td>
+			<td class="table-column-2"><%= @user.first_name %></td>
+		</tr>
+		<tr>
+			<td class="table-label">Last Name:</td>
+			<td class="table-column-2"><%= @user.last_name %></td>
+		</tr>
+		<tr>
+			<td class="table-label">Email:</td>
+			<td class="table-column-2"><%= @user.email %></td>
+		</tr>
+		<tr>
+			<td class="table-label">Birthdate:</td>
+			<td class="table-column-2">
+				<% if @user.birthday %>
+					<%= @user.birthday %>
+				<% end %>
+			</td>
+		</tr>
+
+	</table>
+
+
+<%= link_to "Edit Account Info", edit_user_path(@user), class: "btn btn-primary profile-button" %>
+
+</div> <!-- close profile-view-wrapper -->
+
+
+
+
+
+

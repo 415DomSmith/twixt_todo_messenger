@@ -1,0 +1,152 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require jquery-ui.theme.min
+ *= require jquery-ui.structure.min
+ *= require_self
+ */
+
+
+// =======================
+// ==== COLOR PALETTE ====
+// =======================
+
+/* 
+
+super teal 
+- navbar background color
+HEX: 75DCB1
+RGB: 117, 220, 177
+
+soft green gray 
+- main content area background color
+HEX: DFEBD7
+RGB: 223, 235, 215
+
+off white / very light gray 
+- to replace anything we want to be white
+HEX: F9F9F9
+RGB: 249, 249, 249
+
+deep purple 
+- to replace anything we want to be black
+- body text color, logo text color, outlines/borders, items/groups/li hover color
+HEX: 5F8894
+RGB: 92, 68, 99
+
+blue gray 
+- lower parts of pages
+HEX: 647A9E
+RGB: 100, 122, 158
+
+bright solid blue 
+- h1 text
+HEX: 47B1C5
+RGB: 71, 177, 197
+
+
+==== COLORS NOT CURRENTLY IN USE ====
+
+teal 
+- another potential navbar background option
+HEX: 82E5C6
+RGB: 130, 229, 198
+
+lime green
+HEX: D1EFAB 
+RGB: 209, 239, 171
+
+lightish gray
+HEX: e8e6e6
+
+*/
+
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+ @import url(https://fonts.googleapis.com/css?family=Kranky|Oswald:400,300,700);
+
+
+// ============================================
+// ==== GLOBAL CSS AND COLOR SCHEME ===========
+// ============================================
+
+*, *:after, *:before {
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url('/notebook.jpg');
+	// background-color: #DFEBD7;
+	color: #2F6C79;
+	// 5F8894;
+	line-height: 1.5;
+	font-family: 'Oswald','Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+
+h1 {
+	color: #DF5A43;
+	// 5F8894;
+	margin-bottom: 25px;
+	margin-top: 0;
+	font-weight: 400;
+}
+
+h3 {
+	font-size: 1.35em;
+	font-weight: 400;
+	margin-left: 30px;
+	color: #2F6C79;
+	// 5F8894;
+	margin-bottom: 15px;
+}
+
+.error-messages {
+	margin: 10px;
+}
+
+.float-left {
+	float: left;
+	margin-left: 20px;
+}
+
+label {
+	font-weight: 400;
+	margin: 0;
+}
+
+// ==============================================
+// ==== GLOBAL BUTTON OVERRIDES TO BOOTSTRAP ====
+// ==============================================
+
+.btn {
+	background-color: #f8efc0; /* light yellow bootstrap uses for alerts */
+	background-image: none;
+	color: #2F6C79;
+}
+
+.btn-primary:focus, .btn-primary:hover {
+	background-color: #2F6C79;
+	// border-color: #F9F9F9;
+}
+
+// ===========================================
+// ==== GLOBAL WIDGET OVERRIDES TO JQUERY ====
+// ===========================================
+.ui-widget {
+	color: #2F6C79;
+	line-height: 1.5;
+	font-family: 'Oswald','Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}

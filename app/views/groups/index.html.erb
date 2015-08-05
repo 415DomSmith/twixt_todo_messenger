@@ -1,0 +1,18 @@
+
+<h3> <i class="fa fa-users group-icon"></i>    My Groups</h3>
+
+<div class="groups-list-toggle-outer">
+	<div class="groups-list-toggle-inner">
+		<% @groups.each do |group| %>
+			<%= link_to group_lists_path(group) do %>
+				<div class="group-box">
+					<h5 class="group-box-name"><%= group.name %></h5>
+				</div>
+			<% end %>		
+		<% end %>
+
+	</div>
+</div>
+
+<div class="lower-half-page">
+</div>

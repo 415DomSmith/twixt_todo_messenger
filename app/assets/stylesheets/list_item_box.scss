@@ -1,0 +1,234 @@
+// =========================================================================================================
+// ==== THE DRAGGABLE DROPABLE SUPER DYNAMIC AND INTERACTIVE LIST BOX THAT IS BASICALLY 99% OF OUR APP =====
+// =========================================================================================================
+
+span {
+	padding: 4px;
+}
+
+.instructions-text {
+	text-align: center;
+}
+
+.list-item-box {
+	background-color: #EBE5CC;
+	// F9F9F9;
+	width: 225px;
+	float: left;
+	display: inline-block;
+	margin-left: 20px;
+	margin-top: 20px;
+	border: 3px solid #2F6C79;
+}
+
+.list-body {
+	// width: 220px;
+}
+
+.list-header {
+	background-color: #A7CCC2;
+	//75DCB1
+	// width: 219px;
+	height: 30px;
+	margin-bottom: -10px;
+	border: #2F6C79 solid 1px;
+}
+
+.close-list-button {
+	float: left;
+	margin-left: 3px;
+}
+
+.close-list-button:hover {
+	color: #EBE5CC;
+	cursor: pointer;
+}
+
+.list-name-text-box {
+	display: inline;
+	padding-left: 3px;
+	// width: 180px;
+	overflow-x: hidden;
+	// overflow-y: hidden;
+}
+
+.list-name-text {
+	display: inline;
+	margin-left: 10px;
+	// padding-left: 3px;
+	// width: 180px;
+	overflow-x: hidden;
+}
+
+.add-item-icon {
+	float: right;
+	margin-right: 5px;
+	margin-top: 4px;
+}
+
+.add-item-icon:hover {
+	color: #EBE5CC;
+	// F9F9F9; /* off-white */
+	cursor: pointer;
+}
+
+.list-ul{
+
+}
+
+.list-li {
+	border: #2F6C79 solid 1px;
+	// width: 219px;
+	list-style-type: none;
+	float: left;
+}
+
+.list-item-header-outer {
+	 background-image: url('/notebook.jpg');
+	// background-color: #DFEBD7;
+	// width: 100%;
+	height: 30px;
+	// overflow-x: hidden;
+	// overflow-y: hidden;
+}
+
+.list-item-header-inner {
+	 background-image: url('/notebook.jpg');
+	// background-color: #DFEBD7;
+	// width: 100%;
+	height: 30px;
+	// overflow-x: hidden;
+	// overflow-y: hidden;
+	position: relative;
+}
+
+.collapse-icon {
+	display: inline;
+	float: left;
+	padding-left: 3px;
+	margin-right: 7px;
+	margin-top: 10px;
+}
+
+.collapse-icon:hover {
+	color: #DF5A43;
+	// F9F9F9;
+	cursor: pointer;
+}
+
+.list-item-name {
+	// display: inline;
+	margin-left: 5px;
+}
+
+.list-item-body {
+	background-color: #EBE5CC;
+	// F9F9F9;
+	height: auto;
+}
+
+.image-div {
+	width: 180px;
+	height: 190px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.item-img {
+	width: 180px;
+	height: 190px;
+}
+
+.list-item-footer {
+	margin-top: 20px;
+	background-image: url('/notebook.jpg');
+	//background-color: #DFEBD7;
+}
+
+// BUTTON ICONS
+
+.easy-upload-button {
+	display: inline;
+	float: left;
+	margin-right: 7px;
+	margin-top: 10px;
+}
+
+.easy-upload-button:hover {
+	color: #DF5A43;
+	// F9F9F9;
+	cursor: pointer;
+}
+
+.google-calendar-button {
+	display: inline;
+	float: left;
+	margin-right: 7px;
+	margin-top: 10px;
+}
+
+.google-calendar-button:hover {
+	color: #DF5A43;
+	// F9F9F9;
+	cursor: pointer;
+}
+
+.schedule-email-button {
+	display: inline;
+	float: left;
+	margin-right: 7px;
+	margin-top: 10px;
+}
+
+.schedule-email-button:hover {
+	color: #DF5A43;
+	// F9F9F9;
+	cursor: pointer;
+}
+
+.schedule-text-button {
+	display: inline;
+	float: left;
+	margin-right: 7px;
+	margin-top: 10px;
+
+}
+
+.schedule-text-button:hover {
+	color: #DF5A43;
+	// F9F9F9;
+	cursor: pointer;
+}
+
+.item-completed-button {
+	display: inline;
+	margin-left: 180px;
+}
+
+.item-completed-button:hover {
+	color: #DF5A43;
+	// F9F9F9;
+	cursor: pointer;
+}
+
+.delete-item-button {
+	display: inline;
+	margin-left: 3px;
+}
+
+.delete-item-button:hover {
+	color: #DF5A43;
+	// F9F9F9;
+	cursor: pointer;
+}
+
+// =================================================
+// ========== TILT AND DRAF ANIMATIONS =============
+// =================================================
+
+
+#drop {
+
+
+}
+

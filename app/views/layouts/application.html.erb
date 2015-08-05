@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TwixtApp</title>
+
+  
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
+  <!-- Font-Awesome for Bootstrap -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- Uploadcare for easy uploads -->
+  <script src="https://ucarecdn.com/widget/2.3.5/uploadcare/uploadcare.full.min.js" charset="utf-8"></script>
+
+  <script>
+    UPLOADCARE_PUBLIC_KEY = 'demopublickey';
+  </script>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+</head>
+<body>
+<div class="screen-blanket"></div>
+
+	<div id="navbar">
+
+    <% if session[:user_id] %>
+      <%= link_to groups_path do %>
+        <span class="logo-text">TWIXT</span>
+      <% end %>
+    <% else %>
+      <%= link_to root_path do %>
+        <span class="logo-text">TWIXT</span>
+      <% end %>
+    <% end %>
+
+    <nav class="nav-group-right">
+      <ul> 
+
+      	<% if session[:user_id] and not current_user.nil? %> 
+       		<%= link_to user_path(session[:user_id]) do %>
+            <span class="nav-avatar-mini-profile">
+	       		  <div class="nav-photo-div" title="Link to users profile" style="background-image: url(<%= current_user.avatar %>);"></div>
+	       		</span>  
+	       	<% end %>  
+   			<% end %>
+
+        <% if session[:user_id] and not current_user.nil?%>
+        	<%= link_to logout_path, method: :delete do %> 
+        		<li>Logout</li>
+        	<% end %>
+        <% else %>
+       		<%= link_to root_path do %>
+       			<li>Login</li>
+					<% end %>
+        <% end %>
+
+        <% if session[:user_id] and not current_user.nil? %>
+
+          <% if params[:controller] == 'lists' %>
+            <%= link_to group_lists_path(@group.id) do %> 
+              <li class="click-me-to-add-list">
+                <i class="fa fa-plus-square list-add-icon"></i> New List
+              </li>
+            <% end %>
+          <% end %>
+
+          <% if params[:controller] == 'groups' %>
+            <li class="click-me-to-add-group"><i class="fa fa-plus-square group-add-icon"></i> New Group</li>
+          <% end %>  
+
+          <%= link_to groups_path do %>
+            <li><i class="fa fa-users group-nav-icon"></i> My Groups</li>
+          <% end %>
+
+        <% end %> 
+      
+      </ul>
+    </nav>  
+  </div>
+
+  <div class="hidden-new-group-box">
+    <h3>Create a New Group</h3>
+    <%= form_for group, url: groups_path, method: :post do |f| %>
+      <div><%= f.label :name, class:"new-group-label" %></div>
+      <div><%= f.text_field :name, value: " ", autofocus: true, class:"new-group-form" %></div>
+      <div class="create-group-btn"><%= f.submit "Create a Group", class:"btn btn-primary" %></div>
+    <% end %>
+  </div>
+
+
+
+	<div class="buffer"></div>
+  
+	<% flash.each do |key, value| %>
+	  <% if key == "notice" %>
+	    <%= content_tag :div, value, class: "text-center alert alert-warning" %>
+	  <% elsif key == "alert" %>
+	    <%= content_tag :div, value, class: "text-center alert alert-danger" %>
+	  <% elsif key == "info" %>
+	    <%= content_tag :div, value, class: "text-center alert alert-info" %>
+	  <% else %>
+	    <%= content_tag :div, value, class: "text-center alert alert-success" %>
+	  <% end %>
+	<% end %> 
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+// Place all the styles related to the Groups controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// ===========================
+// ==== GROUP INDEX PAGE =====
+// ===========================
+
+
+
+// ==================================
+// ==== GROUPS SLIDING MENU AREA ====
+// ==================================
+
+.groups-list-toggle-outer {
+	background-image: url('/notebook.jpg');
+	//background-color: #DFEBD7;
+	width: 100vw;
+	height: 150px;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	position: relative;
+	padding-left: 14px;
+}
+
+.groups-list-toggle-inner {
+	width: 120%;
+	height: 150px;
+	overflow-y: hidden;
+	overflow-x: scroll;
+}
+
+.group-icon {
+	margin-right: 10px;
+}
+
+
+// =============================
+// ==== GROUP BOXES/BUTTONS ====
+// =============================
+
+.group-box {
+	height: 100px;
+	width: 170px;
+	background-color: #A7CCC2;
+	// F9F9F9;
+	color: #2F6C79;
+	border: solid #2F6C79 1px;
+	border-radius: 15px;
+	display: inline-block;
+	float: left;
+	list-style: none;
+	padding: 10px;
+	margin-left: 15px;
+	margin-top: 20px;
+}
+
+.group-box:hover {
+	background: #2F6C79;
+	color: #EBE5CC;	
+}
+
+.group-box-name {
+
+}
+
+
+// ===========================
+// ==== GROUP LOWER HALF =====
+// ===========================
+
+
+.lower-half-page {
+	background-image: url('/notebook.jpg');
+	//background-color: #647A9E;
+	height: 100vh;
+	width: 100vw;
+	margin-top: -14px;
+	position: relative;
+}

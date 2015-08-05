@@ -1,0 +1,20 @@
+<div class="resets-box">
+
+	<h1>Welcome back!</h1>
+
+	<p>Let's create a new password and get you logged in.</p>
+
+	<div class="resets-form-box">
+		<p class="resets-instructions">Please enter a new password to continue.</p>
+		<div class="resets-forms">
+			<%= form_for :user, url:reset_path(@user.password_reset_token), method: :patch do |f| %>
+			<div class="resets-label"><%= f.label :password %></div>
+			<p><%= f.password_field :password, autofocus: true %></p>
+
+			<p><%= f.submit "Reset Password", class: "btn btn-primary" %></p>
+
+			<% end %>
+		</div>
+	</div>
+
+</div>

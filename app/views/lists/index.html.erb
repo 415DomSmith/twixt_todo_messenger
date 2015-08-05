@@ -1,0 +1,55 @@
+<h3>Group: <%= @group.name %></h3>
+
+<div class="group-members-slider-outer">
+    <div class="group-members-slider-inner">
+        <% @members.each do |member| %>
+            <div class="members-mini-profile">
+                <div class="group-members-photo-div" title="Link to users profile" style="background-image: url(<%= member.avatar %>);"></div>
+                <div class="user-first-name"><%= member.first_name %></div>
+            </div>
+        <% end %>
+    </div>    
+</div>
+
+
+<div class="hidden-list-box">
+    <h3>Create a New List</h3>
+    <%= form_for [group,new_list], url: group_lists_path(params[:group_id]), method: :post do |f| %>
+        <div><%= f.label "List Name:", class:"new-list-label" %></div>
+        <div><%= f.text_field :name, value: " ", autofocus: true, class:"new-list-form" %></div>
+        <div class="create-list-btn"><%= f.submit "Create a new List", class:"btn btn-primary" %></div>
+    <% end %>
+</div>
+
+<div class="render-forms-here">
+    <i class="close-me-button fa fa-times"></i>
+    <!-- 'Send email reminder' form moved to list_index.js file in javascripts folder -->
+    <!-- 'Add a new list item' form moved to list_index.js file in javascripts folder -->
+</div>    
+
+<div class="below-group-member-list"> 
+    <div class="lists-list-toggles-outer fbox" id="origin">   
+        <!-- <div class="lists-list-toggles-inner" id="origin"> -->
+            <% @lists.each do |list| %>
+                <div class="hidden-remove-box">
+                     <h5>Are you sure you want to delete this list?</h5>
+                     <%= button_to 'Delete', {:controller => :lists, :action => "destroy", id: list.id }, class: "delete-button btn btn-danger btn-s", :method => :delete%>
+                     <button class="cancel-button btn btn-s btn-success">Cancel</button>
+                </div>
+                <div class="list-toggle-box draggable", data-id= <%= list.id %> data-name="<%= list.name %>" >
+                    <div class="remove-list-div"><i class="remove-list fa fa-minus-square", data-id=<%= list.id %>></i></div>
+                    <div><h5 class="list-name"><%= list.name %></h5></div>
+                </div>
+            <% end %>
+        </div>
+    <!-- </div> -->
+</div>
+<h4 class="instructions-text">Drag a list to the shaded area below.</h4>
+<div class="list-display fbox" id="drop" >
+    
+        
+    
+    
+    
+</div>
+

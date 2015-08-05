@@ -1,0 +1,31 @@
+// Place all the styles related to the resets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.resets-box {
+	text-align: center;
+}
+
+.resets-form-box {
+	width: 400px;
+	height: 250px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #EBE5CC;
+	// F9F9F9;
+	border: solid black 1px;
+	border-radius: 35px;
+}
+
+.resets-label {
+	text-align: left;
+	margin-left: 120px;
+}
+
+.resets-forms {
+	margin-top: 40px;
+}
+
+.resets-instructions {
+	margin-top: 20px;
+}

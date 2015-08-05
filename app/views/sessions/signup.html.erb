@@ -1,0 +1,43 @@
+<div class="login-box">
+	<h1>Create a Twixt account</h1>
+
+		<div class="error-messages">
+			<% if @user.errors.any? %>
+		  	<% @user.errors.full_messages.each do |error| %>
+		    	<p class = "text-danger"><%= error %></p>
+		  	<% end %>
+			<% end %>
+		</div>
+	
+		<div class="sign-up-form-box">
+		  	<div class="login-forms">
+
+				<%= form_for @user do |f|%>
+					<p>
+				  		<div class="signup-label"><%= f.label(:first_name) %></div>
+				  		<%= f.text_field(:first_name, autofocus: true, class: "name-field") %>
+					</p>
+					<p>
+			  			<div class="signup-label"><%= f.label(:email) %></div>
+			  			<%= f.text_field(:email, class: "email-field") %>
+					</p>
+					<p>
+						<div class="signup-label"><%= f.label(:password, class: "password-label") %></div>
+						<%= f.password_field(:password, class: "password-field") %>
+					</p>
+					<p>
+						<%= f.submit("Signup", class: "btn btn-primary") %>
+					</p>
+				<% end %>
+			</div> <!-- close login-forms class -->
+
+				<div class="sign-up-link">
+					<h3>Have an account already?</h3>
+					<%= link_to "Login here", login_path, class: "btn btn-primary" %>
+				
+					<h3>Have a Google account?</h3>
+					<%= link_to "Join using your Google account!", '/auth/google_oauth2', class: "btn btn-primary" %>
+				</div>
+
+		</div>	<!-- close sign-up-form-box class -->
+</div> <!-- close login-box class -->
