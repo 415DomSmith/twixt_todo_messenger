@@ -39,7 +39,7 @@ Rails.application.routes.draw do
 # =========================
 # ==== LOGOUT ROUTE =======
 # =========================
-  delete '/logout' => 'sessions#logout', as: 'logout'
+  get '/logout' => 'sessions#logout', as: 'logout'
 
 # =========================
 # ==== USER ROUTES ========
